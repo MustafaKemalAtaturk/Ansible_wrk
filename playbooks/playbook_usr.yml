@@ -3,9 +3,10 @@
   gather_facts: no
 
   roles:
-    - { role: add-account   } 
-    - { role: createfolder  }
-    - { role: ngnix_install }
+
+  - { role: add-account }
+  - { role: createfolder }
+  - { role: ngnix_install }
 
 
 
