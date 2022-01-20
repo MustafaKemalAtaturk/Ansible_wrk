@@ -1,0 +1,20 @@
+- name: install sudo
+  package:
+    name: sudo
+    state: present
+
+- name: Creates directory 1
+  file:
+    path: /opt/folder1
+    state: directory
+    owner: jamie
+    group: optuser
+    mode: 0700
+
+- name: Creates directory 2
+  file:
+    path: /opt/folder2
+    state: directory
+    owner: jamie
+    group: optuser
+    mode: 0700

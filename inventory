@@ -1,0 +1,3 @@
+[servestest]
+server01 ansible_host=18.202.243.81 ansible_become=true ansible_user=ubuntu
+

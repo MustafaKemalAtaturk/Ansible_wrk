@@ -1,0 +1,29 @@
+- name: install sudo
+  package:
+    name: sudo
+    state: present
+
+
+- name: Add group "optuser" to remote server
+  group:
+    name: optuser
+    gid: 2001
+    state: present
+
+- name: Create a new user jamie
+  user:
+    name: jamie
+    group: optuser
+    state: present
+    shell: /bin/bash
+
+- name: add sshkey for jamie
+  authorized_key:
+    state: present
+    user: jamie
+    key: "{{ lookup('file', 'publickey/id_rsa.pub') }}"
+
+
+    
+
+  

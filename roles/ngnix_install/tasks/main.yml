@@ -1,0 +1,22 @@
+- name: install nginx
+  apt:
+    name:  nginx
+    state: present
+  
+- name: Copy nginx.conf file
+  copy:
+    src: cfg_file/nginx.conf
+    dest: /etc/nginx/nginx.conf
+    owner: root
+    group: root
+    mode: '0644'
+  
+- name: Insert index.html to nginx
+  template:
+    src: indexfile/index.html 
+    dest: /usr/share/nginx/html/index.html
+
+- name: Restart nginx
+  service:
+    name: nginx
+    state: restarted
