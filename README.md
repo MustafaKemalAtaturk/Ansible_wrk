@@ -1,4 +1,6 @@
 # Ansible_wrk
+-- First of all, an ip address entry for ansible_host must be provided in the inventory file. --
+
 This repo contains 2 playbooks
 # - playbook_usr.yml
 
