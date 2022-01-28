@@ -45,9 +45,10 @@ This repository contains 2 playbooks and the roles associated with these playboo
   
 <h3>systemctl</h3>
 <strong>perform these tasks:</strong> 
-
-      Interferes with systemctl using the ansible.posix.sysctl plugin. The aim is to perform the following task.
+Interferes with systemctl using the ansible.posix.sysctl plugin. The aim is to perform the following task.
       
-                        [Updates the kernel parameter which enables TCP Forwarding]
+<ul>
+  <li>Updates the kernel parameter which enables TCP Forwarding</li>
+  </ul>
 
       
